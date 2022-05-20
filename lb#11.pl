@@ -52,7 +52,9 @@ parent(zhdana,zlatomir).
 daughter(X):-parent(Y,X),woman(X),write(X),!.
 daughter(X,Y):- parent(Y,X),woman(X).
 
-
+%12
+wife(X,Y):-parent(X,Z),parent(Y,Z).
+wife(X):-parent(X,Z),parent(Y,Z),woman(Y),write(Y),!.
 
 
 
