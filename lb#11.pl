@@ -60,6 +60,8 @@ wife(X):-parent(X,Z),parent(Y,Z),woman(Y),write(Y),!.
 grand_ma(X,Y):-parent(X,Z),parent(Z,Y),woman(X).
 grand_ma(X):-parent(X,Z),parent(Z,Y),woman(X),write(X),!.
 
+%14
+grand_ma_and_da(X,Y):-woman(X),woman(Y);parent(X,Z),parent(Z,Y),parent(W,X),parent(Y,W).
 
 
 
