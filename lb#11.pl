@@ -56,6 +56,10 @@ daughter(X,Y):- parent(Y,X),woman(X).
 wife(X,Y):-parent(X,Z),parent(Y,Z).
 wife(X):-parent(X,Z),parent(Y,Z),woman(Y),write(Y),!.
 
+%13
+grand_ma(X,Y):-parent(X,Z),parent(Z,Y),woman(X).
+grand_ma(X):-parent(X,Z),parent(Z,Y),woman(X),write(X),!.
+
 
 
 
