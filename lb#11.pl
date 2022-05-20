@@ -47,3 +47,20 @@ parent(duhovlad,zdislava).
 parent(duhovlad,zlatomir).
 parent(zhdana,zdislava).
 parent(zhdana,zlatomir).
+
+%11
+daughter(X):-parent(Y,X),woman(X),write(X),!.
+daughter(X,Y):- parent(Y,X),woman(X).
+
+
+
+
+
+
+
+
+
+
+
+
+
