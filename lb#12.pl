@@ -86,3 +86,13 @@ findMaxPer(D,Index,LocalD, LocalIndex) :-
     (NewLocalD>LocalD,NewLocalIndex is Index; NewLocalIndex is LocalIndex),
     NewIndex is Index + 1,
     findMaxPer(D,NewIndex, NewLocalD, NewLocalIndex),!.
+
+%14
+lengthlist([],0):-!.
+lengthlist([_|T], CNTS) :- length(T,I), CNTS is I + 1.
+
+readList(0,[]) :- !.
+readList(I,[X|T]) :- write('input - '),read(X), I1 is I - 1, readList(I1, T).
+
+write_list([]) :- !.
+write_list([X|T]) :- write(X), nl, write_list(T).
