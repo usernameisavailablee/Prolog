@@ -10,7 +10,7 @@ pr(X,I):- 0 is X mod I,!,fail.
 pr(X,I):- I1 is I+1, pr(X,I1).
 
 m_s_u(X,Y):-m_s_u(X,X,Y),!.
-m_s_u(X,N,N):-s
+m_s_u(X,N,N):-
     0 is X mod N,
     pr(N),!.
 m_s_u(X,N,Y):-
