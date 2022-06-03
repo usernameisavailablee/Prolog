@@ -96,7 +96,8 @@ readList(I,[X|T]) :- write('input - '),read(X), I1 is I - 1, readList(I1, T).
 
 write_list([]) :- !.
 write_list([X|T]) :- write(X), nl, write_list(T).
-	
+
+%15	
 byindex(L,I,El):-byindex(L,I,El,0).
 	byindex([H|_],K,H,K):-!.
 	byindex([_|Tail],I,El,Cou):-
