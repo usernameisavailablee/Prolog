@@ -72,3 +72,4 @@ grand_ma_and_da(X,Y):-woman(X),woman(Y);parent(X,Z),parent(Z,Y),parent(W,X),pare
 
 
 
+
